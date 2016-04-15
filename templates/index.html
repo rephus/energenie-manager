@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"></meta>
+        <title>Energenie manager</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!--<link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/player.css" />
+        <link rel="stylesheet" href="css/files.css" />-->
+        <link rel="stylesheet" href="static/css/ionicons/ionicons.min.css" />
+        <link rel='stylesheet' href='static/css/ux/materialize.min.css'/>
+
+    <link rel='stylesheet' type='text/css' href='static/style.css'></link>
+    <script language='javascript' src='static/js/ux/jquery.min.js'></script>
+    <script language='javascript' src='static/js/sockets.js'></script>
+    <script languaje='javascript' src="static/js/ux/mustache.min.js"></script>
+    <script languaje='javascript' src="static/js/ux/materialize.min.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+
+            <h2>Sockets</h2>
+            <ul id='sockets'>
+              <script id='socket-template' type=x-tmpl-mustache>
+              {{#.}}
+                  <li > <a href="#" class='bucket-toggle' id='{{id}}'>{{name}}</a> </li>
+                  <div class="switch">
+                    <label>
+                      Off
+                      <input class='switch-checkbox' type="checkbox" id='{{id}}'>
+                      <span class="lever"></span>
+                      On
+                    </label>
+                  </div>
+
+              {{/.}}
+              </script>
+            </ul>
+        </div>
+
+  </body>
+
+</html>
